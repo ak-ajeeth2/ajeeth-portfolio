@@ -2,10 +2,13 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="container hero-container">
+        {/* Left Content */}
         <div className="hero-content">
           <p className="hero-greeting">Hello, I'm</p>
 
-          <h1>Ajeeth Kumar S</h1>
+          <h1>
+            Ajeeth Kumar <span>S</span>
+          </h1>
 
           <h2>React.js / Frontend Developer</h2>
 
@@ -25,7 +28,7 @@ function Hero() {
             </a>
 
             <a
-              href="/Ajeethkumar_ReactJS.pdf"
+              href={`${import.meta.env.BASE_URL}Ajeethkumar_ReactJS.pdf`}
               className="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
@@ -51,9 +54,27 @@ function Hero() {
               IN&nbsp; LinkedIn
             </a>
 
-            <a href="mailto:YOUR_EMAIL@gmail.com">
+            <a href="mailto:ajeethkumar15ee002@gmail.com">
               @&nbsp; Email
             </a>
+          </div>
+        </div>
+
+        {/* Right Profile */}
+        <div className="hero-profile">
+          <div className="hero-profile-glow"></div>
+
+          <div className="hero-profile-ring">
+            <img
+              src={`${import.meta.env.BASE_URL}ajeeth_Noborder.png`}
+              alt="Ajeeth Kumar S - React.js Frontend Developer"
+              className="hero-profile-image"
+            />
+          </div>
+
+          <div className="hero-profile-badge">
+            <span className="hero-profile-status"></span>
+            Open to Opportunities
           </div>
         </div>
       </div>

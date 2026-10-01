@@ -2,6 +2,7 @@ function Skills() {
   const skillGroups = [
     {
       title: "Frontend Development",
+      description: "Core technologies I use for building modern web interfaces.",
       skills: [
         "React.js",
         "JavaScript",
@@ -17,6 +18,7 @@ function Skills() {
     },
     {
       title: "API & Development Tools",
+      description: "Tools and technologies used throughout the development lifecycle.",
       skills: [
         "REST APIs",
         "Git",
@@ -30,6 +32,7 @@ function Skills() {
     },
     {
       title: "Build & Performance",
+      description: "Techniques and tools for efficient, optimized applications.",
       skills: [
         "Webpack",
         "Babel",
@@ -43,6 +46,7 @@ function Skills() {
     },
     {
       title: "Engineering Practices",
+      description: "Development practices I follow for maintainable applications.",
       skills: [
         "Reusable Components",
         "Component-Based Architecture",
@@ -54,45 +58,70 @@ function Skills() {
     },
   ];
 
+  const coreSkills = [
+    "React.js",
+    "JavaScript",
+    "TypeScript",
+    "Redux",
+    "React Hooks",
+    "REST APIs",
+  ];
+
   return (
     <section id="skills" className="section skills-section">
       <div className="container">
-
+        {/* Section Heading */}
         <div className="section-heading">
           <p className="section-label">SKILLS</p>
 
-          <h2>
-            Technologies I work with
-          </h2>
+          <h2>Technologies I work with</h2>
 
           <p>
             A combination of frontend technologies, development tools and
-            engineering practices I use to build modern web applications.
+            engineering practices I use to build scalable and reliable web
+            applications.
           </p>
         </div>
 
+        {/* Core Skills */}
+        <div className="core-skills">
+          <p className="core-skills-label">CORE EXPERTISE</p>
+
+          <div className="core-skills-list">
+            {coreSkills.map((skill) => (
+              <span key={skill} className="core-skill">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Skill Groups */}
         <div className="skills-grid">
           {skillGroups.map((group) => (
-            <div
-              className="skill-card"
-              key={group.title}
-            >
-              <h3>{group.title}</h3>
+            <article className="skill-card" key={group.title}>
+              <div className="skill-card-header">
+                <div className="skill-card-number">
+                  {String(skillGroups.indexOf(group) + 1).padStart(2, "0")}
+                </div>
+
+                <h3>{group.title}</h3>
+              </div>
+
+              <p className="skill-card-description">
+                {group.description}
+              </p>
 
               <div className="skill-list">
                 {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="skill-tag"
-                  >
+                  <span key={skill} className="skill-tag">
                     {skill}
                   </span>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -1,11 +1,22 @@
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-container">
-
         <div className="footer-info">
-          <h3>Ajeeth Kumar S</h3>
-          <p>React.js / Frontend Developer</p>
+          <a href="#home" className="footer-brand">
+            <span className="footer-logo">AK</span>
+
+            <span>
+              <strong>Ajeeth Kumar S</strong>
+              <small>React.js / Frontend Developer</small>
+            </span>
+          </a>
+
+          <p>
+            Building responsive, scalable and high-performance web
+            applications with React.js and modern frontend technologies.
+          </p>
         </div>
 
         <div className="footer-links">
@@ -28,15 +39,20 @@ function Footer() {
           <a href="mailto:ajeethkumar15ee002@gmail.com">
             Email
           </a>
-        </div>
 
+          <a href="tel:+917200695913">
+            Phone
+          </a>
+        </div>
       </div>
 
       <div className="footer-bottom">
-        <div className="container">
-          <p>
-            © 2026 Ajeeth Kumar S. All rights reserved.
-          </p>
+        <div className="container footer-bottom-container">
+          <p>© 2026 Ajeeth Kumar S. All rights reserved.</p>
+
+          <span>
+            Built with React.js
+          </span>
         </div>
       </div>
     </footer>
